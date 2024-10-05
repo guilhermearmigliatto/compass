@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "b96f9c9a-bd25-4a85-8645-c97a15b3d17a",
+		"name": "Compass Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7050133"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"sellerId\": 1,\r\n  \"payments\": [\r\n    {\r\n      \"chargeId\": 1,\r\n      \"amount\": 100.00\r\n    },\r\n    {\r\n      \"chargeId\": 2,\r\n      \"amount\": 150.00\r\n    },\r\n    {\r\n      \"chargeId\": 3,\r\n      \"amount\": 600.00\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/payment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment"
+					]
+				},
+				"description": "Process payments."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/seller/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/seller/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"seller",
+						""
+					]
+				},
+				"description": "Get all sellers."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/seller/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/seller/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"seller",
+						"1"
+					]
+				},
+				"description": "Get on specific seller by id."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/seller/100",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/seller/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"seller",
+						"100"
+					]
+				},
+				"description": "Get a specific seller by id."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/charge/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/charge/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"charge",
+						""
+					]
+				},
+				"description": "Get all charges."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/charge/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/charge/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"charge",
+						"1"
+					]
+				},
+				"description": "Get a specific charge by id."
+			},
+			"response": []
+		}
+	]
+}
